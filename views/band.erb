@@ -2,7 +2,7 @@
 
 <div id="ratings_group">
   <% if @selected_band.rating %>
-  <p> THIS IS THE RATING: <%= @selected_band.rating %> </p>
+  <p>  RATING: <%= @selected_band.rating %> </p>
   <% else %>
   <p>Rate It</p>
   <form action="/add_ratings" method="post">
@@ -23,7 +23,7 @@
   <% end %>
 
 <div id= "venues_group">
-  <p>Venues Choose: </p>
+  <p>Venues Playing: </p>
 
   <% if @selected_band.venues.any? %>
     <% @selected_band.venues.each() do |venue| %>

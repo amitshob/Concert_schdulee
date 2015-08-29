@@ -3,7 +3,7 @@ By Amit Mhatre
 
 **Description**
 
-This App allows you to track bands and the venues where they've played concerts.
+This App allows you to track bands and the venues where they've will play.
 
 
 **Setup**-
