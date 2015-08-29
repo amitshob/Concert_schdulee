@@ -11,6 +11,8 @@ This App allows you to track bands and the venues where they've played concerts.
 * Clone repository
 * Install Postgres and have it working
 
+The app is viewable [**online**].
+
 
 
 ***Technologies Used**
