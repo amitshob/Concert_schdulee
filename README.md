@@ -9,10 +9,12 @@ This App allows you to track bands and the venues where they've will play.
 **Setup**-
 
 * Clone repository
+* run $bundle in your terminal
 * Install Postgres and have it working
-
-The app is viewable [**online**].
-
+* run ruby app.rb
+* run rake db:create
+* run rake db:migrate
+* type http://localhost:4567 in browser address window
 
 
 ***Technologies Used**
