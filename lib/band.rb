@@ -10,3 +10,5 @@ class Band < ActiveRecord::Base
   end
   #has_many: :ingredients, through: :ingredients_bands
 end
+
+ 
