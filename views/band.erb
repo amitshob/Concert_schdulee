@@ -1,0 +1,64 @@
+<p>You are viewing <%= @selected_band.name %></p>
+
+<div id="ratings_group">
+  <% if @selected_band.rating %>
+  <p>  RATING: <%= @selected_band.rating %> </p>
+  <% else %>
+  <p>Rate It</p>
+  <form action="/add_ratings" method="post">
+    <input type="hidden" name="id" value="<%= @selected_band.id()%>">
+    <input type="radio" name="rating" value="1">*
+
+    <input type="radio" name="rating" value="2">**
+
+    <input type="radio" name="rating" value="3">***
+
+    <input type="radio" name="rating" value="4">****
+
+    <input type="radio" name="rating" value="5">*****
+
+    <button type="submit" class="btn btn-sucess">Add Rating</button>
+  </form>
+</div>
+  <% end %>
+
+<div id= "venues_group">
+  <p>Venues Playing: </p>
+
+  <% if @selected_band.venues.any? %>
+    <% @selected_band.venues.each() do |venue| %>
+      <li> <%= venue.name() %> </li>
+    <% end %>
+  <% else %>
+    <form action="/venue_associate" method = "post">
+      <input type="hidden" name="id" value="<%= @selected_band.id()%>"
+      <% @venues.each do |venue| %>
+        <input type="checkbox" name="venue_checkbox[]" value="<%= venue.id() %>"><%= venue.name %>
+      <% end %>
+      <button name="button">Associate</button>
+    </form>
+  <% end %>
+
+</div>
+
+<div id= "update_band">
+  <p>Rename Band</p>
+  <form action ="/update_bandname/<%=@selected_band.id()%>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input id="name" name="name" type="text">
+
+  <button type="submit">Update</button>
+</form>
+</div>
+<br>
+<form id="delete_form" class="form-inline" role="form" action="/band/<%= @selected_band.id() %>" method="post">
+  <div class="form-group">
+    <input type="hidden" name="_method" value="delete">
+    <h1>Band: <i><%= @selected_band.name() %></i></h1>
+  </div>
+  <button id="delete_button" type="submit" class="glyphicon trash"><i class="fa fa-trash-o"></i></button>
+</form>
+
+
+
+ <a href="/">Home</a>

@@ -1,0 +1,27 @@
+<h1 style="text-align: center; margin-bottom: 50px;">Concert Schedule</i></h1>
+
+
+<p>Band List:</p>
+
+
+<p><i>Add Band:</i></p>
+
+<form action="/bands" method="post">
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit" class="btn btn-success">Add Band</button>
+</form>
+
+<ul>
+<% if @bands.any?() %>
+  <% @bands.each() do |band| %>
+  <li><a href="/bands/<%= band.id %>"><%= band.name() %></a></li>
+  <% end %>
+<% end %>
+</ul>
+
+
+<!-- for testing -->
+<br>
+<a href="/venues_link">Venues </a>
