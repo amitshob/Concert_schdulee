@@ -1,6 +1,4 @@
 require('spec_helper')
-<<<<<<< HEAD
-=======
 
 describe(Band) do
   
@@ -16,4 +14,4 @@ describe(Band) do
 
   
 end
->>>>>>> c3a7b01c02574eb9badd1707a3e611f610b5dd17
+
