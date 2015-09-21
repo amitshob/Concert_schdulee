@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 require('pry')
-=======
->>>>>>> c3a7b01c02574eb9badd1707a3e611f610b5dd17
+
 require('sinatra')
 require('sinatra/reloader')
 require('sinatra/activerecord')
@@ -9,11 +8,8 @@ also_reload('./lib/**/*.rb')
 require('./lib/band')
 require('./lib/venue')
 require('pg')
-<<<<<<< HEAD
 
-=======
 require('pry')
->>>>>>> c3a7b01c02574eb9badd1707a3e611f610b5dd17
 
 get("/") do
   @bands = Band.all() # it stores all the band values in the instancce variable and passes all bands to the index page
@@ -34,13 +30,13 @@ end
 post("/bands") do
   temporary_name = params.fetch("name")
   temporary_band = Band.create({:name => temporary_name}) # created a new instance of band and saved it in the database
-<<<<<<< HEAD
+
    @bands = Band.all()
-=======
+
 
 
   @bands = Band.all()
->>>>>>> c3a7b01c02574eb9badd1707a3e611f610b5dd17
+
   erb(:index)
 end
 
@@ -51,7 +47,7 @@ get("/bands/:id") do
   erb(:band)
 end
 
-<<<<<<< HEAD
+
 patch("/update_bandname/:id") do
   @selected_band = Band.find(params.fetch('id').to_i())
   name= params.fetch("name")
@@ -64,9 +60,7 @@ delete('/band/:id') do
   Band.find(params.fetch('id').to_i()).destroy()
   redirect('/')
 end
-=======
 
->>>>>>> c3a7b01c02574eb9badd1707a3e611f610b5dd17
 
 post("/venues") do
   venue=params.fetch("venue")
