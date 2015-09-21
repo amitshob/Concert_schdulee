@@ -26,9 +26,8 @@
       <% end %>
     <% end %>
     </ul>
-<<<<<<< HEAD
+
 
     <li><a href="/venues/<%= venue.id %>"><%= venue.name() %></a></li>
     <% end %>
-=======
->>>>>>> c3a7b01c02574eb9badd1707a3e611f610b5dd17
+
