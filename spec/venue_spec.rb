@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 require('spec_helper')
-=======
+
 require('spec-helper')
 describe(venue) do
   
@@ -14,4 +14,4 @@ describe(venue) do
     expect(test_venue.save()).to(eq(false))
   end
 end 
->>>>>>> c3a7b01c02574eb9badd1707a3e611f610b5dd17
+
